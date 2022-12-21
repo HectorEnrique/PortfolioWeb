@@ -1,0 +1,49 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+  background-image: url(../img/gradiente.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  &__contenido{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  &__presentacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__headingg {
+    color: v.$primario;
+    margin: 2rem 0;
+    text-align: center;
+    &--block{
+      display: block;
+    }
+  }
+  &__rool {
+    background-color: v.$terciario;
+    text-align: center;
+    padding: 1rem;
+    display: inline;
+    border-radius: 1rem;
+    border: 1px solid v.$primario;
+    box-shadow: 3px 3px 0 rgba(0 0 0 / 1);
+  }
+  &__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 25rem;
+      height: 25rem;
+      object-fit: cover;
+    }
+  }
+}

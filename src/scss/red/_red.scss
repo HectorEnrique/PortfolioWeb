@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.red {
+  padding-top: v.$separacion;
+  @include m.mobil {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__contenedor{
+    @include m.tablet {
+      @include m.grid(2, v.$separacion);
+      align-items: center;
+    }
+    @include m.desktop {
+      @include m.grid(2, v.$separacion);
+      align-items: center;
+    }
+  }
+  &__yt{
+    @include m.mobil {
+      display: block;
+      margin-top: 2rem;
+    }
+  }
+  &__imagen{
+    margin-top: 2rem;
+    source, img {
+      border-radius: 1rem;
+      box-shadow: 5px 5px 0 rgba($color: v.$complemento, $alpha: 1.0);
+    }
+    img {
+      border: 1px solid v.$complemento;
+    }
+  }
+  &__yt_t{
+    text-align: center;
+    margin-top: 1rem;
+  }
+  &__copyright {
+    color: rgba(250, 249, 249, 0.2);
+    margin: 2rem 0 0 0;
+    font-size: v.$pMM;
+    text-align: center;
+    @include m.desktop {
+      font-size: v.$pDM;
+    }
+  }
+}

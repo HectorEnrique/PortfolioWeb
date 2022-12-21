@@ -1,0 +1,23 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.contenedor {
+  max-width: 75rem;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[class$='__heading'] {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2rem;
+  &:after{
+    content: '';
+    width: 100%;
+    height: .5rem;
+    display: block;
+    background-color: v.$secundario;
+    position: absolute;
+  }
+}

@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.articulos {
+  padding-top: calc((v.$separacion) * 3);
+  @include m.mobil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__contenedor{
+    @include m.tablet {
+      @include m.grid(2, 2rem);
+    }
+    @include m.desktop {
+      @include m.grid(2, 2rem);
+    }
+  }
+  &__articulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include m.mobil {
+      margin-bottom: 3rem;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__imagen{
+    source, img {
+      width: 50rem;
+      height: 30rem;
+      object-fit: cover;
+      border-radius: 1rem;
+      box-shadow: 5px 5px 0 rgba($color: v.$complemento, $alpha: 1.0);
+      @include m.tablet {
+        width: 45rem;
+        height: 25rem;
+      }
+      @include m.desktop {
+        width: 45rem;
+        height: 25rem;
+      }
+    }
+    img {
+      border: 1px solid v.$complemento;
+    }
+  }
+  &__titulo{
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

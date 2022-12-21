@@ -1,0 +1,89 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.cards {
+  @include m.tablet {
+    @include m.grid(2, 2rem);
+  }
+  @include m.desktop {
+    @include m.grid(2, 2rem);
+  }
+  &__card {
+    border-radius: 2rem;
+    box-shadow: 6px 6px 0 rgba($color: v.$complemento, $alpha: 1.0);
+    border: 1px solid v.$complemento;
+    overflow: hidden;
+    @include m.mobil {
+      margin-bottom: 2rem;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__imagen {
+    img{
+      width: 50rem;
+      height: 20rem;
+      object-fit: cover;
+    }
+  }
+  &__info{
+    background-color: v.$texto;
+    padding: 1rem;
+  }
+  &__desc, &__interaccion{
+    color: v.$primario;
+  }
+  &__interacciones{
+      display: flex;
+    @include m.mobil {
+      justify-content: center;
+      gap: 2rem;
+    }
+    @include m.tablet {
+      gap: 1rem;
+    }
+    @include m.desktop {
+      gap: 1rem;
+    }
+  }
+  &__desc{
+    padding-bottom: 1rem;
+    font-size: v.$pMM;
+    @include m.mobil {
+      text-align: center;
+    }
+    @include m.desktop {
+      font-size: v.$pDM;
+    }
+    &--azul {
+      color: v.$terciario;
+    }
+  }
+  &__interaccion{
+    display: inline-flex;
+    gap: .5rem;
+    align-items: center;
+    font-size: v.$pMM;
+    @include m.desktop {
+      font-size: v.$pDM;
+    }
+    background-color: v.$terciario;
+    border-radius: 1rem;
+    border: 1px solid v.$complemento;
+    transition: box-shadow .1s ease-out;
+    padding: .5rem 1rem;
+    @include m.tablet {
+      padding: 1rem;
+    }
+    &:hover {
+      box-shadow: 4px 4px 0 rgba($color: v.$complemento, $alpha: 1.0);
+    }
+    &:active {
+      box-shadow: 2px 2px 0 rgba($color: v.$complemento, $alpha: 1.0);
+    }
+  }
+}
+.bx.bx-git-merge, .bx.bxl-github{
+  font-size: 2rem;
+}

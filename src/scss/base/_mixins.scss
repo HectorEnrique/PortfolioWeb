@@ -1,0 +1,22 @@
+@use 'variables' as v;
+
+@mixin mobil {
+  @media screen and (max-width: v.$mobil){
+    @content;
+  }
+}
+@mixin tablet{
+  @media screen and (min-width: v.$tablet1) and (max-width: v.$tablet2){
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: v.$desktop){
+    @content;
+  }
+}
+@mixin grid($columnas, $separacion){
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $separacion;
+}

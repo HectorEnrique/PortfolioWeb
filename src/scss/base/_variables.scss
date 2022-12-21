@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'display';
+  src: url(../fonts/sfDisplay.OTF);
+}
+@font-face {
+  font-family: 'displayR';
+  src: url(../fonts/sfDisplayR.OTF);
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+//colores
+$primario: #151515;
+$secundario: #FF537C;
+$terciario: #8886FD;
+$texto: #FAF9F9;
+$complemento: #000000;
+
+//Tipografía
+$garnett: 'Inter', sans-serif;
+$display: 'display';
+$displayR: 'displayR';
+
+$separacion: 5rem;
+//tamaño de fuente -> MOBIL
+$h1M: 4.8rem;
+$h2M: 3.2rem;
+$h3M: 2.2rem;
+$pM: 1.6rem;
+$pMM: 1.4rem;
+
+//tamaño de fuente -> PC-TABLET
+$h1D: 6.4rem;
+$h2D: 4rem;
+$h3D: 2.4rem;
+$pD: 2rem;
+$pDM: 1.6rem;
+
+//mixins
+$mobil: 767px;
+$tablet1: 768px;
+$tablet2: 1023px;
+$desktop: 1024px;

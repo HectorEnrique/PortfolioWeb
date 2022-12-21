@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.habilidades {
+  &__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    @include m.tablet{
+      justify-content: flex-start;
+    }
+    @include m.desktop{
+      justify-content: flex-start;
+    }
+  }
+  &__habilidad {
+    cursor: cell;
+    display: inline-block;
+    padding: 1rem;
+    background-color: v.$secundario;
+    border-radius: .5rem;
+    border: 1px solid v.$complemento;
+    box-shadow: .5rem .5rem 0 rgba($color: v.$complemento, $alpha: 1.0);
+    transition: box-shadow .1s ease;
+    &:hover {
+      box-shadow: .2rem .2rem 0 rgba($color: v.$complemento, $alpha: 1.0);
+    }
+  }
+  &__tecnologia, &__progreso {
+    text-align: center;
+    letter-spacing: .1rem;
+  }
+  &__progreso {
+    font-family: v.$garnett;
+    font-weight: 400;
+    font-size: 1.6rem;
+    opacity: .7;
+    margin-top: -.2rem;
+  }
+}

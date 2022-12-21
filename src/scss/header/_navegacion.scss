@@ -1,0 +1,93 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navegacion {
+  position: sticky;
+  z-index: 2;
+  top: 4rem;
+  transform: translateY(-3.5rem);
+  &--top {
+    top: 0;
+    transform: translateY(1rem);
+  }
+  &__logo{
+    font-size: 2rem;
+  }
+  &__contenedor {
+    padding: 2rem;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    max-width: 100rem;
+    width: 95%;
+    background-color: v.$texto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid v.$primario;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 0 rgba($color: (v.$complemento), $alpha: 1.0);
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: v.$texto;
+    position: absolute;
+    right: 0;
+    top: 8.2rem;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid v.$primario;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility, box-shadow;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+    @include m.desktop{
+      flex-direction: inherit;
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+      top: 0;
+      border-radius:0;
+      padding: 0;
+      border: 0;
+    }
+    &--active{
+      top: 8rem;
+      box-shadow: 5px 5px 0 rgba($color: (v.$complemento), $alpha: 1.0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__item {
+    transition: text-decoration .3s ease;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__li {
+    &--flex {
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+    }
+  }
+  &__menu {
+  display: block;
+  @include m.desktop{
+      display: none;
+    }
+  }
+  &__logo, &__item, &__menu {
+    color: v.$primario;
+  }
+}
+
+.bx.bx-menu, .bx.bx-x {
+  font-size: 3rem;
+}
