@@ -1,0 +1,34 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.BJ {
+  &__grid{
+    @include m.tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+    @include m.desktop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+  }
+  &__img{ 
+    margin-bottom: 2rem;
+    @include m.tablet{
+      margin-bottom: 0;
+    }
+    @include m.desktop {
+      margin-bottom: 0;
+    }
+    img {
+      border-radius: 2rem;
+      border: 1px solid v.$complemento;
+      box-shadow: 5px 5px 0 rgba($color: v.$complemento, $alpha: 1.0);
+      height: 25rem;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
