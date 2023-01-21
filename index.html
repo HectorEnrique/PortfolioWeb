@@ -10,7 +10,7 @@
   <title>EnriDev - Home</title>
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="inicio">
     <div class="header__contenido contenedor">
       <div class="header__presentacion">
         <h1 class="header__headingg">HOLA!, SOY <span class="header__heading--block">HECTOR JIMÉNEZ</span></h1>
@@ -26,7 +26,7 @@
     <nav class="navegacion__contenedor">
       <a href="#" class="navegacion__logo">HectorJimenez()</a>
       <ul class="navegacion__items" id="items">
-        <li class="navegacion__li"><a href="index.html" class="navegacion__item">Inicio</a></li>
+        <li class="navegacion__li"><a href="#inicio" class="navegacion__item">Inicio</a></li>
         <li class="navegacion__li"><a href="#proyectos" class="navegacion__item">Proyectos</a></li>
         <li class="navegacion__li"><a href="#habilidades" class="navegacion__item">Habilidades</a></liclass>
         <li class="navegacion__li"><a href="pages/articulos.html" class="navegacion__item">Articulos</a></li>
@@ -44,13 +44,13 @@
           Hector, es un desarrollador Front-End y diseñador que disfruta crear cosas en internet. Tiende a ser bastante autodidacta lo cual lo convirtió en alguien proactivo y con muchas ganas de aprender, con el fin de expandir su conocimiento. Además, contribuye a la gente de su mismo rol en grupos (Facebook) y foros. Cuando no se encuentra en la red está con sus mascotas y pasando el rato con su familia.
         </p>
       </div>
-      <div class="sobre_Mi__imagen">
-        <img class="sobre_Mi__autor" src="build/img/autor.png" alt="Imagen autor">
+      <div class="sobre_Mi__imagen" >
+        <img class="sobre_Mi__autor" id="proyectos" src="build/img/autor.png" alt="Imagen autor">
       </div>
     </div>
   </article>
 
-  <section class="proyectos contenedor" id="proyectos">
+  <section class="proyectos contenedor">
     <h2 class="proyectos__heading">Proyectos</h2>
     <div class="proyectos__contenedor">
       <div class="cards">
@@ -68,6 +68,22 @@
             </div>
          </div>
         </div> <!--Proyecto-->
+
+        <div class="cards__card">
+          <picture class="cards__imagen">
+            <source srcset="build/img/proyecto3.webp" type="image/webp">
+            <source srcset="build/img/proyecto3.avif" type="image/avif">
+            <img src="build/img/proyecto3.png" alt="Imagen Proyecto">
+          </picture>
+          <div class="cards__info">
+            <p class="cards__desc">Compite con una maquina para ganar en el juego <span class="cards__desc--azul">TailwindCSS</span>.</p>
+            <div class="cards__interacciones">
+              <a href="pages/pizzaPlanet.html" class="cards__interaccion">Visitar <i class='bx bx-git-merge' ></i></a>
+              <a href="https://github.com/HectorEnrique/PizzaPlanet-s-Web" class="cards__interaccion" target="_blank">Fuente <i class='bx bxl-github'></i></a>
+            </div>
+         </div>
+        </div> <!--Proyecto-->
+
         <div class="cards__card">
           <picture class="cards__imagen">
             <source srcset="build/img/proyecto2.webp" type="image/webp">
@@ -77,8 +93,8 @@
           <div class="cards__info">
             <p class="cards__desc">Compite con una maquina para ganar en el juego  <span class="cards__desc--azul">Blackjack</span>.</p>
             <div class="cards__interacciones">
-              <a href="pages/blackJack.html" class="cards__interaccion">Visitar <i class='bx bx-git-merge' ></i></a>
-              <a href="https://github.com/HectorEnrique/BLACKJACK" class="cards__interaccion" target="_blank">Fuente <i class='bx bxl-github'></i></a>
+              <a href="pages/blackjack.html" class="cards__interaccion">Visitar <i class='bx bx-git-merge' ></i></a>
+              <a href="https://github.com/HectorEnrique/BLACKJACK" class="cards__interaccion" target="_blank">Fuente <i class='bx bxl-github' id="habilidades"></i></a>
             </div>
          </div>
         </div> <!--Proyecto-->
@@ -86,7 +102,7 @@
     </div>
   </section>
 
-  <section class="habilidades contenedor" id="habilidades">
+  <section class="habilidades contenedor" >
     <h2 class="habilidades__heading">Habilidades</h2>
     <div class="habilidades__contenedor">
       <div class="habilidades__wrap">
@@ -96,6 +112,10 @@
         </div>
         <div class="habilidades__habilidad">
           <p class="habilidades__tecnologia">Figma/UI</p>
+          <p class="habilidades__progreso">Intermedio</p>
+        </div>
+        <div class="habilidades__habilidad">
+          <p class="habilidades__tecnologia">TailwindCSS</p>
           <p class="habilidades__progreso">Intermedio</p>
         </div>
         <div class="habilidades__habilidad">
