@@ -8,8 +8,10 @@ Portafolio web creado con la siguientes tecnologías:
 * Figma -----> https://figma.com/
 * Gulp ------> https://gulpjs.com/
 
-![image](https://user-images.githubusercontent.com/103299718/197845136-1c8d006e-9b7e-4130-9008-d35abbb02803.png)
+![image](https://user-images.githubusercontent.com/103299718/213880662-db3eea1d-a8c6-45ad-b4df-3c65f9c36c26.png)
 
-![image](https://user-images.githubusercontent.com/103299718/197845187-31ed9456-e5a3-4689-b20d-db0f378b4d8f.png)
+![image](https://user-images.githubusercontent.com/103299718/213880681-cb69d1a8-e192-42a7-b74c-f48720f4fee6.png)
 
-![image](https://user-images.githubusercontent.com/103299718/197845269-90406715-3693-4f2b-9622-f4081ce6ac8a.png)
+![image](https://user-images.githubusercontent.com/103299718/213880697-944f317a-f849-4e50-8e6f-95bfc48beb3d.png)
+
+© 2022 Hector Jimenez | Todos los derechos reservados.
